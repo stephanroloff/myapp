@@ -19,9 +19,25 @@ li {
     }
 }
 
-.blackWhiteText{
-    @apply text-customBlack dark:text-white transition-all duration-500 ease-in-out;
+.softTrans{
+    @apply transition-all duration-300 ease-in-out;
 }
-.blackWhiteBg{
-    @apply bg-white dark:bg-customBlack transition-all duration-500 ease-in-out;
+
+.blackToWhiteText{
+    @apply text-customBlack dark:text-white softTrans;
+}
+
+.whiteToBlackText{
+    @apply text-white dark:text-customBlack softTrans;
+}
+
+.whiteToBlackBg{
+    @apply bg-white dark:bg-customBlack softTrans;
+}
+.blackToWhiteBg{
+    @apply bg-customBlack dark:bg-white softTrans;
+}
+
+.customGraySoftTocustomGrayBg{
+    @apply bg-customGraySoft dark:bg-customGray softTrans;
 }

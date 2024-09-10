@@ -1,20 +1,15 @@
-import { Link } from "react-router-dom";
+import ButtonToggleDarkMode from "./ButtonToggleDarkMode";
+import SelectToggleLang from "./SelectToggleLang";
 
 function Navbar() {
     return (
-    <nav className='flex px-8 py-4'>
-        <ul className='flex gap-[50px]'>
-            <li className="blackWhiteText">
-                <Link to="/">Home</Link>
+    <nav className='navbar flex px-8 py-3 w-full'>
+        <ul className='flex justify-end gap-[20px] w-full'>
+            <li className="pt-[2px]">
+                <ButtonToggleDarkMode />
             </li>
-            <li className="blackWhiteText">
-                <Link to="/about">About</Link>
-            </li>
-            <li className="blackWhiteText">
-                <Link to="/contact">Contact</Link>
-            </li>
-            <li className="blackWhiteText">
-                <a href="/sample-page">Sample</a>
+            <li>
+                <SelectToggleLang />
             </li>
         </ul>
     </nav>

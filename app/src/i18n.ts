@@ -7,17 +7,32 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
-      greeting: "Welcome to the Application!"
+      greeting: "Welcome to the Application!",
+      sidebar:{
+        home: 'Home',
+        running: 'Running',
+        read: 'Read',
+      },
     }
   },
   es: {
     translation: {
-      greeting: "Bienvenido a la aplicación!"
+      greeting: "Bienvenido a la aplicación!",
+      sidebar:{
+        home: 'Inicio',
+        running: 'Correr',
+        read: 'Leer',
+      },
     }
   },
   de:{
     translation: {
-        greeting: "Willkommen bei der Anwendung!"
+        greeting: "Willkommen bei der Anwendung!",
+        sidebar:{
+          home: 'Startseite',
+          running: 'Joggen',
+          read: 'Lesen',
+        },    
     }
   }
 };
