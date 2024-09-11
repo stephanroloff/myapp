@@ -6,6 +6,11 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
+    test:{
+      globals: true,
+      environment: "jsdom",
+      setupFiles: './src/__tests__/setup.ts'
+    },
     base: isProduction ? '/wp-content/themes/wp-react-app/app/dist' : '/'
   }
 })
