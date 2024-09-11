@@ -1,4 +1,5 @@
-import './assets/css/main.css'
+import './assets/css/main.css';
+import './assets/css/fonts.css';
 // import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
 import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Home from './Pages/Home';

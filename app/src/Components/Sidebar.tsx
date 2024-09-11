@@ -12,7 +12,7 @@ function Sidebar() {
             <nav className="h-full p-4 min-w-[300px] border-r-2 dark:border-r border-customGraySoft dark:border-customGray softTrans">
                 <div className="logo mb-4">
                     <img src={Logo} alt="" className="inline mr-2"/>
-                    <p className="inline blackToWhiteText">Mind</p>
+                    <p className="inline blackToWhiteText font-fontSecondary">HabitMind</p>
                 </div>
                 <ul className='flex flex-col'>
                     <SidebarLink route={'/'} name={'Home'} icon={IoHome} notification={0}/>

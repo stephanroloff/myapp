@@ -2,8 +2,12 @@
     font-size: 24px;
 }
 
+body {
+    @apply font-fontPrimary;
+}
+
 li {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .animate-spin-react {

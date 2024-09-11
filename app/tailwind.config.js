@@ -27,10 +27,12 @@ export default {
       boxShadow: {
         'custom': '0 4px 26px rgba(0, 0, 0, 0.6), 0 2px 4px rgba(0, 0, 0, 0.6)',
       },
-    // fontFamily: {
-    //   sans: ['Graphik', 'sans-serif'],
-    //   serif: ['Merriweather', 'serif'],
-    // },
+    fontFamily: {
+      sans: ['Graphik', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+      fontPrimary: ['publicSans'],
+      fontSecondary: ['barlow'],
+    },
     },
     screens: {
       'sm': '640px',

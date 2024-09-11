@@ -2,3 +2,5 @@ node_modules
 build
 .DS_Store
 /vendor/
+app/src/assets/fonts/barlow/borrar
+app/src/assets/fonts/public-sans/static
