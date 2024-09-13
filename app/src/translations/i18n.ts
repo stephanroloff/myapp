@@ -1,40 +1,16 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import { enTranslation } from "./enTranslations";
+import { esTranslation } from "./esTranslations";
+import { deTranslation } from "./deTranslations";
 
 // the translations
 // (tip move them in a JSON file and import them,
 // or even better, manage them separated from your code: https://react.i18next.com/guides/multiple-translation-files)
 const resources = {
-  en: {
-    translation: {
-      greeting: "Welcome to the Application!",
-      sidebar:{
-        home: 'Home',
-        running: 'Running',
-        read: 'Read',
-      },
-    }
-  },
-  es: {
-    translation: {
-      greeting: "Bienvenido a la aplicación!",
-      sidebar:{
-        home: 'Inicio',
-        running: 'Correr',
-        read: 'Leer',
-      },
-    }
-  },
-  de:{
-    translation: {
-        greeting: "Willkommen bei der Anwendung!",
-        sidebar:{
-          home: 'Startseite',
-          running: 'Joggen',
-          read: 'Lesen',
-        },    
-    }
-  }
+  en: enTranslation,
+  es: esTranslation,
+  de: deTranslation
 };
 
 i18n

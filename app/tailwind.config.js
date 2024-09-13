@@ -12,12 +12,27 @@ export default {
         'autofill-300': 'repeat(auto-fill, minmax(300px, 1fr))',
       },
       colors: {
-        // 'themeColor': '##426fff',
+        // 'themeColor': '#ff1744',          
+        // 'themeColorSoft': '#ff8a80',      
+        // 'themeColorObscure': '#330000',   
+        // 'themeColorLightSoft': '#ffe6e6', 
+
+
+        // 'themeColor': '#ffd700',          
+        // 'themeColorSoft': '#ffeb99',      
+        // 'themeColorObscure': '#665c00',   
+        // 'themeColorLightSoft': '#fff9e6', 
+
+        // 'themeColor': '#007bff',          
+        // 'themeColorSoft': '#80d3f7',      
+        // 'themeColorObscure': '#003366',  
+        // 'themeColorLightSoft': '#e6f2ff', 
+
+
         'themeColor': '#02a76e',
-        // 'themeColorSoft': '#00b9ff',
         'themeColorSoft': '#5ce49b',
-        // 'themeColorObscure': '#092D43',
         'themeColorObscure': '#162528',
+        'themeColorLightSoft': '#f0f8f4',
 
         'customBlack': '#131a21',
         'cardGray': '#1c252e',

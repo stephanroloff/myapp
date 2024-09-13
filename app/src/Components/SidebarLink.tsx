@@ -1,6 +1,7 @@
 import { IconType } from "react-icons";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
+import Notification  from './Notification';
 
 type SidebarLinkProps = {
     route:string;
@@ -19,7 +20,7 @@ const SidebarLink = ({route, name, icon:Icon, notification}:SidebarLinkProps) =>
             to={route} 
             className={({ isActive }) =>
                 isActive 
-                ? " text-themeColor dark:text-themeColorSoft softTrans flex justify-between items-center border-l-2 border-themeColor dark:border-themeColorSoft bg-[#f0f8f4] dark:bg-themeColorObscure rounded-r-md py-2"
+                ? " text-themeColor dark:text-themeColorSoft softTrans flex justify-between items-center border-l-2 border-themeColor dark:border-themeColorSoft bg-themeColorLightSoft dark:bg-themeColorObscure rounded-r-md py-2"
                 : " text-customGray dark:text-white softTrans flex justify-between items-center border-l-2 border-customGraySoft dark:border-customGray py-1"
             }
             >
@@ -31,10 +32,7 @@ const SidebarLink = ({route, name, icon:Icon, notification}:SidebarLinkProps) =>
                 </div>
 
                 {notification>0?(
-                    <span className="relative top-0 right-0 flex h-2 w-2 mr-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-                    </span>
+                    <Notification />
                 ):''}
             </NavLink>
         </li>

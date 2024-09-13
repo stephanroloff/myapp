@@ -2,5 +2,3 @@ select button: accesibility
 font Type (borrar los que no se van a ocupar)
 font size (h1,h2,h3,h4,h5,h6,p)
 submenus
-crear carpeta translate para i18n
-Sidebar Logo (Component bauen und clickbar machen)

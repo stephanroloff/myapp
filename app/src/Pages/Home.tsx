@@ -1,4 +1,5 @@
 import reactLogo from '../assets/img/react.svg'
+import Button from '../Components/Button';
 import viteLogo from '/vite.svg'
 import { useTranslation } from 'react-i18next';
 
@@ -7,6 +8,9 @@ function Home() {
 
   return <>
           <h2 className="text-center pb-8 blackToWhiteText">Home Page</h2>
+          <div className="flex justify-center py-4">
+          <Button>Click me!</Button>
+          </div>
           <div className='flex justify-center gap-2'>
             <a href="https://vitejs.dev" target="_blank" className="logo w-full max-w-[245px]">
               <img src={viteLogo} className="logo w-full" alt="Vite logo" />

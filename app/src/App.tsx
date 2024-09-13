@@ -7,12 +7,16 @@ import Contact from './Pages/Contact';
 import Navbar from './Components/Navbar';
 import Sidebar from './Components/Sidebar';
 import Running from './Pages/Running';
+import Background from './Components/Background';
+import Elements from './Pages/Elements';
 
 function App() {
 
   return (
     <Router>
-    <div className='main-container flex whiteToBlackBg h-screen w-full'>
+    <div className='main-container flex whiteToBlackBg h-screen w-full relative z-[1]'>
+        <Background/>
+
         <Sidebar/>
         <div className='content-navbar-container w-full h-full'>
           <Navbar/>
@@ -21,6 +25,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<Running />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/elements" element={<Elements />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </div>
