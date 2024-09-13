@@ -1,8 +1,8 @@
-import Card from "../Components/Card";
+import Card from "../components/Card";
 import { useTranslation } from 'react-i18next';
-import Spinner from "../Components/Spinner";
-import Button from "../Components/Button";
-import Spacer from "../Components/Spacer";
+import Spinner from "../components/Spinner";
+import Button from "../components/Button";
+import Spacer from "../components/Spacer";
 
 function Elements() {
   const { t } = useTranslation();

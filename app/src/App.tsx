@@ -2,13 +2,13 @@ import './assets/css/main.css';
 import './assets/css/fonts.css';
 // import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
 import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import Home from './Pages/Home';
-import Contact from './Pages/Contact';
-import Navbar from './Components/Navbar';
-import Sidebar from './Components/Sidebar';
-import Running from './Pages/Running';
-import Background from './Components/Background';
-import Elements from './Pages/Elements';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
+import Running from './pages/Running';
+import Background from './components/Background';
+import Elements from './pages/Elements';
 
 function App() {
 

@@ -1,5 +1,5 @@
 import reactLogo from '../assets/img/react.svg'
-import Button from '../Components/Button';
+import Button from '../components/Button';
 import viteLogo from '/vite.svg'
 import { useTranslation } from 'react-i18next';
 
