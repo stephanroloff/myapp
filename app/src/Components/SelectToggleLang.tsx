@@ -12,10 +12,6 @@ const SelectToggleLang = ({...rest}: SelectToggleLangProps) => {
   const [activeLang, setActiveLang] = useState('en'); // Idioma activo por defecto
   const dropdownRef = useRef<HTMLDivElement>(null); // Referencia al menú desplegable
 
-
-  console.log(flagEs);
-  
-
   const toggleLang = (value: string) => {
     i18n.changeLanguage(value);
     setActiveLang(value); // Cambia el idioma activo

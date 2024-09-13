@@ -4,17 +4,20 @@ import { FaPersonRunning } from "react-icons/fa6";
 import { GiRead } from "react-icons/gi";
 import { SlNotebook } from "react-icons/sl";
 import SidebarLogo from "./SidebarLogo";
+import {Accordion} from "@/components/ui/accordion"
 
 function Sidebar() {
     return (
         <aside className="sidebar">
-            <nav className="h-full p-4 w-[300px] border-r-2 dark:border-r border-customGraySoft dark:border-customGray softTrans">
+            <nav className="h-full p-4 w-[350px] border-r-2 dark:border-r border-customGraySoft dark:border-customGray softTrans">
                 <SidebarLogo/>
                 <ul className='flex flex-col'>
-                    <SidebarLink route={'/'} name={'Home'} icon={IoHome} notification={0}/>
-                    <SidebarLink route={'/about'} name={'Running'} icon={FaPersonRunning} notification={0}/>
-                    <SidebarLink route={'/contact'} name={'Read'} icon={GiRead} notification={0}/>
-                    <SidebarLink route={'/elements'} name={'Elements'} icon={SlNotebook} notification={0}/>
+                    <Accordion type="single" collapsible className="w-full">
+                        <SidebarLink route={'/'} name={'Home'} icon={IoHome} notification={0} value={"item-1"}/>
+                        <SidebarLink route={'/about'} name={'Running'} icon={FaPersonRunning} notification={0} value={"item-2"}/>
+                        <SidebarLink route={'/contact'} name={'Read'} icon={GiRead} notification={0} value={"item-3"}/>
+                        <SidebarLink route={'/elements'} name={'Elements'} icon={SlNotebook} notification={0} value={"item-4"}/>
+                    </Accordion>
                 </ul>
             </nav>
         </aside>

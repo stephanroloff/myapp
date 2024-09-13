@@ -16,10 +16,22 @@ export default {
   			themeColorSoft: '#5ce49b',
   			themeColorObscure: '#162528',
   			themeColorLightSoft: '#f0f8f4',
-  			customBlack: '#131a21',
+
+			themeColor: '#0077b6',       
+			themeColorSoft: '#69c0ff',   
+			themeColorObscure: '#0a192f',
+			themeColorLightSoft: '#ebf8ff',
+
+			themeColor: '#f5c518',      
+			themeColorSoft: '#ffe066',   
+			themeColorObscure: '#3b2f01',
+			themeColorLightSoft: '#fffbea',
+  			
+			customBlack: '#131a21',
   			cardGray: '#1c252e',
   			customGray: '#283440',
   			customGraySoft: '#f1f1f1',
+
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

@@ -10,6 +10,13 @@ li {
     font-size: 18px;
 }
 
+h1{
+    @apply text-[46px] !important;
+}
+h2{
+    @apply text-[36px] !important;
+}
+
 .animate-spin-react {
     animation: spin 55s linear infinite;
 }
@@ -59,4 +66,6 @@ li {
     animation: l3 1.2s infinite linear;
   }
   @keyframes l3 {to{transform: rotate(1turn)}}
+
+
 

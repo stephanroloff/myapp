@@ -1,5 +1,7 @@
-select button: accesibility 
+select button: accesibility (mas bien cambiarlo por select de shadcn) 
 font Type (borrar los que no se van a ocupar)
 font size (h1,h2,h3,h4,h5,h6,p)
 submenus
 spacer (agregarle props)
+cambio de darkmode a light letras de accordions hacen una animacion rara
+framer Motion
