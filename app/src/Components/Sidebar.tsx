@@ -14,7 +14,7 @@ function Sidebar() {
                 <ul className='flex flex-col'>
                     <Accordion type="single" collapsible className="w-full">
                         <SidebarLink route={'/'} name={'Home'} icon={IoHome} notification={0} value={"item-1"}/>
-                        <SidebarLink route={'/about'} name={'Running'} icon={FaPersonRunning} notification={0} value={"item-2"}/>
+                        <SidebarLink route={'/running'} name={'Running'} icon={FaPersonRunning} notification={0} value={"item-2"}/>
                         <SidebarLink route={'/contact'} name={'Read'} icon={GiRead} notification={0} value={"item-3"}/>
                         <SidebarLink route={'/elements'} name={'Elements'} icon={SlNotebook} notification={0} value={"item-4"}/>
                     </Accordion>

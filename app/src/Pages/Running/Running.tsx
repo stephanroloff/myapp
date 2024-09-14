@@ -1,4 +1,4 @@
-import Card from "../components/Card";
+import Card from "../../components/Card";
 import { useTranslation } from 'react-i18next';
 import {
   Accordion,

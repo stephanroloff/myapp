@@ -1,8 +1,12 @@
-const Spacer = () => {
-
-    return  (
-        <div className="h-[50px]"></div>
-    );
-};
+type SpacerProps = {
+    height: number;
+  };
   
-export default Spacer;
+  const Spacer = ({ height }: SpacerProps) => {
+    return (
+      <div style={{ height: `${height}px` }}></div>
+    );
+  };
+  
+  export default Spacer;
+  

@@ -19,8 +19,10 @@ function Elements() {
         <h4>h4 Element</h4>
         <h5>h5 Element</h5>
         <h6>h6 Element</h6>
-        <Spacer/>
+        <p>Paragraph</p>
+        <Spacer height={50}/>
         <Spinner/>
+        <Spacer height={100}/>
         
       {/* </div> */}
     </>

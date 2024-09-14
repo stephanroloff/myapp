@@ -7,6 +7,8 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion"
+import { useState } from "react";
+import { FaPersonWalkingDashedLineArrowRight } from "react-icons/fa6";
 
 type SidebarLinkProps = {
     route:string;
@@ -18,35 +20,51 @@ type SidebarLinkProps = {
 
 const SidebarLink = ({route, name, icon:Icon, notification, value}:SidebarLinkProps) => {
     const { t } = useTranslation();
+    const [linkActive, setlinkActive] = useState<boolean>(false)
+    
 
     return  (
         // <Accordion type="single" collapsible className="w-full">
             <AccordionItem value={value}>
-            <li className="blackToWhiteText w-full">
+            <li className="blackToWhiteText w-full text-customGray dark:text-white softTrans">
                 <NavLink 
                 to={route} 
+                // className={({ isActive }) =>
+                //     isActive 
+                //     ? "text-themeColor dark:text-themeColorSoft softTrans flex justify-between items-center border-l-2 border-themeColor dark:border-themeColorSoft bg-themeColorLightSoft dark:bg-themeColorObscure rounded-br-lg py-2"
+                //     : "w-full text-customGray dark:text-white softTrans flex justify-between items-center border-l-2 border-customGraySoft dark:border-customGray"
+                // }
                 className={({ isActive }) =>
-                    isActive 
-                    ? " text-themeColor dark:text-themeColorSoft softTrans flex justify-between items-center border-l-2 border-themeColor dark:border-themeColorSoft bg-themeColorLightSoft dark:bg-themeColorObscure rounded-br-lg py-2"
-                    : "w-full text-customGray dark:text-white softTrans flex justify-between items-center border-l-2 border-customGraySoft dark:border-customGray py-1"
+                    isActive? (setlinkActive(true)):(setlinkActive(false))
                 }
                 >
+                    <div
+                    className={linkActive?
+                        'text-themeColor dark:text-themeColorSoft softTrans flex justify-between items-center border-l-2 border-themeColor dark:border-themeColorSoft bg-themeColorLightSoft dark:bg-themeColorObscure rounded-br-lg py-2'
+                        :
+                        'w-full text-customGray dark:text-white softTrans flex justify-between items-center border-l-2 border-customGraySoft dark:border-customGray'}
+                    >
                     <AccordionTrigger>
-                            <div className="icon-text-container flex items-center">
-                                <div className="children-icon mx-2 mt-[4px]">
-                                    <Icon className="w-4 h-4"/>
+                            <div className={linkActive? "text-themeColor dark:text-themeColorSoft softTrans icon-text-container flex items-center":"text-customGray dark:text-white softTrans icon-text-container flex items-center"}>
+                                <div className="children-icon mx-4">
+                                    <Icon className="w-5 h-5"/>
                                 </div>
                                 {t(`sidebar.${name.toLowerCase()}`)}
-                            </div>
-
-                            {notification>0?(
+                                {notification>0?(
                                 <Notification />
                             ):''}
+                            </div>
                     </AccordionTrigger>
+                    </div>
+
                 </NavLink>
-                <AccordionContent>
-                    <p className="pl-4">Option 1</p>
-                    <p className="pl-4">Option 2</p>
+                <AccordionContent className="py-2 pl-3">
+                    <NavLink to={`${route}/statistics`}>
+                        <p className="w-full rounded-md pl-4 py-1 hover:cursor-pointer hover:bg-themeColorLightSoft dark:hover:bg-themeColorObscure">
+                            Option 1
+                        </p>
+                    </NavLink>
+                    <p className="w-full rounded-md pl-4 py-1 hover:cursor-pointer hover:bg-themeColorLightSoft dark:hover:bg-themeColorObscure">Option 2</p>
                 </AccordionContent>
             </li>
             </AccordionItem>

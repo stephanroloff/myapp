@@ -19,7 +19,7 @@ const ButtonToggleDarkMode = ({children='', ...rest}: ButtonToggleDarkModeProps)
     return  (
         <button {...rest} 
         onClick={toggleDarkMode}
-        className="flex justify-center items-center min-w-6 w-auto h-6 mb-4 rounded-full blackToWhiteBg whiteToBlackText"
+        className="flex justify-center items-center min-w-10 w-auto h-10 text-xl mb-5 rounded-full blackToWhiteBg whiteToBlackText"
         >
           {isDarkMode ? (<><IoSunnyOutline />{children}</>) : (<><IoMoonOutline />{children}</>)}
         </button>

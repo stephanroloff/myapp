@@ -7,6 +7,21 @@ export default {
   darkMode: ["class"],
   theme: {
   	extend: {
+		fontSize: {
+			xs: ['0.75rem', { lineHeight: '1rem' }],   // 12px
+			sm: ['0.875rem', { lineHeight: '1.25rem' }], // 14px
+			base: ['1rem', { lineHeight: '1.5rem' }],    // 16px
+			lg: ['1.125rem', { lineHeight: '1.75rem' }], // 18px
+			xl: ['1.25rem', { lineHeight: '1.75rem' }],  // 20px
+			'2xl': ['1.5rem', { lineHeight: '2rem' }],   // 24px
+			'3xl': ['1.875rem', { lineHeight: '2.25rem' }], // 30px
+			'4xl': ['2.25rem', { lineHeight: '2.5rem' }],  // 36px
+			'5xl': ['3rem', { lineHeight: '1' }],       // 48px
+			'6xl': ['3.75rem', { lineHeight: '1' }],    // 60px
+			'7xl': ['4.5rem', { lineHeight: '1' }],     // 72px
+			'8xl': ['6rem', { lineHeight: '1' }],       // 96px
+			'9xl': ['8rem', { lineHeight: '1' }],       // 128px
+		},
   		gridTemplateColumns: {
   			'autofit-300': 'repeat(auto-fit, minmax(300px, 1fr))',
   			'autofill-300': 'repeat(auto-fill, minmax(300px, 1fr))'
@@ -17,15 +32,15 @@ export default {
   			themeColorObscure: '#162528',
   			themeColorLightSoft: '#f0f8f4',
 
-			themeColor: '#0077b6',       
-			themeColorSoft: '#69c0ff',   
-			themeColorObscure: '#0a192f',
-			themeColorLightSoft: '#ebf8ff',
+			// themeColor: '#0077b6',       
+			// themeColorSoft: '#69c0ff',   
+			// themeColorObscure: '#0a192f',
+			// themeColorLightSoft: '#ebf8ff',
 
-			themeColor: '#f5c518',      
-			themeColorSoft: '#ffe066',   
-			themeColorObscure: '#3b2f01',
-			themeColorLightSoft: '#fffbea',
+			// themeColor: '#f5c518',      
+			// themeColorSoft: '#ffe066',   
+			// themeColorObscure: '#3b2f01',
+			// themeColorLightSoft: '#fffbea',
   			
 			customBlack: '#131a21',
   			cardGray: '#1c252e',
@@ -103,11 +118,21 @@ export default {
   				to: {
   					height: '0'
   				}
-  			}
+  			},
+			// 'fade-in': {
+			// '0%': { opacity: 0, transform: 'scale(0.95)' },
+			// '100%': { opacity: 1, transform: 'scale(1)' },
+			// },
+			// 'fade-out': {
+			// '0%': { opacity: 1, transform: 'scale(1)' },
+			// '100%': { opacity: 0, transform: 'scale(0.95)' },
+			// },
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
+  			'accordion-up': 'accordion-up 0.2s ease-out',
+			'fade-in': 'fade-in 0.2s ease-out',
+        	'fade-out': 'fade-out 0.2s ease-in',
   		}
   	},
   	screens: {

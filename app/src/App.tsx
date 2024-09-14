@@ -6,7 +6,8 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
-import Running from './pages/Running';
+import Running from './pages/Running/Running';
+import RunningStatistics from './pages/Running/Statistics';
 import Background from './components/Background';
 import Elements from './pages/Elements';
 
@@ -18,14 +19,15 @@ function App() {
         <Background/>
 
         <Sidebar/>
-        <div className='content-navbar-container w-full h-full'>
+        <div className='content-navbar-container w-full h-full overflow-scroll'>
           <Navbar/>
           <div className="content-container px-7">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/about" element={<Running />} />
+              <Route path="/running" element={<Running />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/elements" element={<Elements />} />
+              <Route path="/running/statistics" element={<RunningStatistics />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </div>

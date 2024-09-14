@@ -6,9 +6,9 @@ const SidebarLogo = () => {
 
     return  (
             <Link to={'/'}>
-              <div className="logo mb-4">
+              <div className="logo mb-8 mt-2 ml-2 flex items-center">
                   <img src={Logo} alt="" className="inline mr-2"/>
-                  <p className="inline blackToWhiteText font-fontSecondary">HabitMind</p>
+                  <p className="inline blackToWhiteText font-fontSecondary text-3xl">HabitMind</p>
               </div>
             </Link>
     );
