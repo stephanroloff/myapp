@@ -1,8 +1,8 @@
 // import React from 'react';
 
-function Contact() {
+function Read() {
   return <>
-          <h2 className="blackToWhiteText">Contact Page</h2>
+          <h2 className="blackToWhiteText">Read Page</h2>
           <div className="grid grid-cols-autofit-300 gap-3 mt-4 w-full">
             <div className="w-full h-[50px] bg-green-600">1</div>
             <div className="w-full h-[50px] bg-red-600">2</div>
@@ -14,4 +14,4 @@ function Contact() {
         </>
 }
 
-export default Contact;
+export default Read;

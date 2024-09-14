@@ -1,0 +1,17 @@
+{
+    "myHabbits":[
+        {
+            "name": "Running",
+            "url": "running",
+            "habitType": 1,
+            "submenus": ["statistics"]
+        },
+        {
+            "name": "Read",
+            "url": "read",
+            "habitType": 1,
+            "submenus": ["statistics"]
+        }
+    ]
+    
+}

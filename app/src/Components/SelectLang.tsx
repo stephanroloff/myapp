@@ -56,9 +56,9 @@ const SelectLang = () => {
         </SelectTrigger>
         <SelectContent>
           <SelectGroup>
-            {objSelectLangItem.map((item) => {
+            {objSelectLangItem.map((item, index) => {
                 return(
-                    <SelectItem value={item.value}>
+                    <SelectItem value={item.value} key={index}>
                         <div className="flex">
                         <img src={item.src} alt={item.alt} className="w-10 h-8 mr-1" />
                         <span className='blackToWhiteText pt-[2px] text-xl'>{item.text}</span>

@@ -58,6 +58,8 @@ const SidebarLink = ({route, name, icon:Icon, notification, value}:SidebarLinkPr
                     </div>
 
                 </NavLink>
+
+                {/* Submenus */}
                 <AccordionContent className="py-2 pl-3">
                     <NavLink to={`${route}/statistics`}>
                         <p className="w-full rounded-md pl-4 py-1 hover:cursor-pointer hover:bg-themeColorLightSoft dark:hover:bg-themeColorObscure">
