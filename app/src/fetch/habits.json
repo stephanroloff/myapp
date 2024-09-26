@@ -5,7 +5,7 @@
             "url": "running",
             "habitType": 1,
             "icon": "FaPersonRunning",
-            "submenus": ["statistics", "edit"],
+            "submenus": ["statistics", "challenge", "edit"],
             "notification": 0
         },
         {
@@ -13,7 +13,7 @@
             "url": "read",
             "habitType": 1,
             "icon": "GiRead",
-            "submenus": ["statistics", "edit"],
+            "submenus": ["statistics", "challenge", "edit"],
             "notification": 0
         }
     ]

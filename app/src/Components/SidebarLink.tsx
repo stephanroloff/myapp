@@ -21,7 +21,6 @@ type SidebarLinkProps = {
 const SidebarLink = ({route, name, icon:Icon, notification, value, submenus}:SidebarLinkProps) => {
     const { t } = useTranslation();
     const [linkActive, setlinkActive] = useState<boolean>(false)
-    
 
     return  (
         // <Accordion type="single" collapsible className="w-full">
@@ -37,6 +36,9 @@ const SidebarLink = ({route, name, icon:Icon, notification, value, submenus}:Sid
                 className={({ isActive }) =>
                     isActive? (setlinkActive(true)):(setlinkActive(false))
                 }
+                // className={({ isActive }) => 
+                //     `${isActive ? 'active' : ''}`
+                // }
                 >
                     <div
                     className={linkActive?
@@ -63,8 +65,19 @@ const SidebarLink = ({route, name, icon:Icon, notification, value, submenus}:Sid
                 <AccordionContent className="py-2 pl-3">
                     {!submenus ? '' : (
                         submenus.map((submenu, index) => (
-                            <NavLink key={index} to={`${route}/${submenu}`}>
-                            <p className="w-full rounded-md pl-4 py-1 hover:cursor-pointer hover:bg-themeColorLightSoft dark:hover:bg-themeColorObscure">
+                            <NavLink 
+                                key={index} 
+                                to={`${route}/${submenu}`}
+                                className={({ isActive }) => 
+                                    `${isActive ? 'active' : ''}`
+                                }
+                            >
+                            <p className="w-full rounded-md my-1 pl-4 py-1 
+                            hover:cursor-pointer hover:bg-themeColorLightSoft 
+                            dark:hover:bg-themeColorObscure 
+                            [.active_&]:dark:bg-themeColorObscure [.active_&]:bg-themeColorLightSoft
+                            [.active_&]:text-themeColor
+                            ">
                                 {t(`sidebar.${submenu.toLowerCase()}`)}
                             </p>
                             </NavLink>

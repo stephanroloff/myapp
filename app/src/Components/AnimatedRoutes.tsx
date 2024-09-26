@@ -8,6 +8,7 @@ import TemplateEdit from '@/pages/Templates/TemplateEdit';
 import { DataPerson } from '../types/index.types';
 import TemplateGeneral from '@/pages/Templates/TemplateGeneral';
 import React from 'react';
+import TemplateChallenge from '@/pages/Templates/TemplateChallenge';
 
 export default function AnimatedRoutes() {
   const location = useLocation(); 
@@ -17,11 +18,15 @@ export default function AnimatedRoutes() {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path={"/statistics"} element={<Home />} />
+        <Route path={"/trackingquestions"} element={<Home />} />
 
         {allMyHabbits.map((data, index) => (
           <React.Fragment key={index}>
             <Route path={`/${data.url}`} element={<TemplateGeneral data={data} />} />
             <Route path={`/${data.url}/statistics`} element={<TemplateStatistics data={data} />} />
+            <Route path={`/${data.url}/challenge`} element={<TemplateChallenge data={data} />} />
             <Route path={`/${data.url}/edit`} element={<TemplateEdit data={data} />}  />
           </React.Fragment>
         ))}

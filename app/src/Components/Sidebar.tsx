@@ -34,12 +34,12 @@ function Sidebar() {
                 <ul className='flex flex-col'>
                     <Accordion type="single" collapsible className="w-full">
                         <SidebarLink 
-                            route={'/'} 
+                            route={'/home'} 
                             name={'Home'} 
                             icon={IoHome} 
                             notification={0} 
                             value={"item-1"}
-                            submenus={[]} 
+                            submenus={["statistics", "trackingquestions"]} 
                         />
 
                         {allMyHabbits.map((data, index) => {
