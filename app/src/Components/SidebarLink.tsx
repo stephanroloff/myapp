@@ -8,7 +8,6 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion"
 import { useState } from "react";
-import { FaPersonWalkingDashedLineArrowRight } from "react-icons/fa6";
 
 type SidebarLinkProps = {
     route:string;
@@ -16,9 +15,10 @@ type SidebarLinkProps = {
     icon: IconType;
     notification: number;
     value: string;
+    submenus: string[] 
 }
 
-const SidebarLink = ({route, name, icon:Icon, notification, value}:SidebarLinkProps) => {
+const SidebarLink = ({route, name, icon:Icon, notification, value, submenus}:SidebarLinkProps) => {
     const { t } = useTranslation();
     const [linkActive, setlinkActive] = useState<boolean>(false)
     
@@ -47,7 +47,7 @@ const SidebarLink = ({route, name, icon:Icon, notification, value}:SidebarLinkPr
                     <AccordionTrigger>
                             <div className={linkActive? "text-themeColor dark:text-themeColorSoft softTrans icon-text-container flex items-center":"text-customGray dark:text-white softTrans icon-text-container flex items-center"}>
                                 <div className="children-icon mx-4">
-                                    <Icon className="w-5 h-5"/>
+                                    <Icon className="w-7 h-7"/>
                                 </div>
                                 {t(`sidebar.${name.toLowerCase()}`)}
                                 {notification>0?(
@@ -61,12 +61,15 @@ const SidebarLink = ({route, name, icon:Icon, notification, value}:SidebarLinkPr
 
                 {/* Submenus */}
                 <AccordionContent className="py-2 pl-3">
-                    <NavLink to={`${route}/statistics`}>
-                        <p className="w-full rounded-md pl-4 py-1 hover:cursor-pointer hover:bg-themeColorLightSoft dark:hover:bg-themeColorObscure">
-                            Option 1
-                        </p>
-                    </NavLink>
-                    <p className="w-full rounded-md pl-4 py-1 hover:cursor-pointer hover:bg-themeColorLightSoft dark:hover:bg-themeColorObscure">Option 2</p>
+                    {!submenus ? '' : (
+                        submenus.map((submenu, index) => (
+                            <NavLink key={index} to={`${route}/${submenu}`}>
+                            <p className="w-full rounded-md pl-4 py-1 hover:cursor-pointer hover:bg-themeColorLightSoft dark:hover:bg-themeColorObscure">
+                                {t(`sidebar.${submenu.toLowerCase()}`)}
+                            </p>
+                            </NavLink>
+                        ))
+                    )}
                 </AccordionContent>
             </li>
             </AccordionItem>

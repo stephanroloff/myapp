@@ -6,6 +6,8 @@ export const esTranslation = {
       running: 'Correr',
       read: 'Leer',
       elements: 'Elementos',
+      statistics: 'Estadísticas',
+      edit: 'Editar'
     },
   }
 }

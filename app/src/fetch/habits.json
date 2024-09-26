@@ -4,13 +4,17 @@
             "name": "Running",
             "url": "running",
             "habitType": 1,
-            "submenus": ["statistics"]
+            "icon": "FaPersonRunning",
+            "submenus": ["statistics", "edit"],
+            "notification": 0
         },
         {
             "name": "Read",
             "url": "read",
             "habitType": 1,
-            "submenus": ["statistics"]
+            "icon": "GiRead",
+            "submenus": ["statistics", "edit"],
+            "notification": 0
         }
     ]
     

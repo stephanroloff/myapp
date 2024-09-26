@@ -50,7 +50,7 @@ const SelectLang = () => {
     ]
 
     return  (
-        <Select defaultValue={'en'} onValueChange={handleValueChange}>
+      <Select defaultValue={'en'} onValueChange={handleValueChange}>
         <SelectTrigger className="w-[160px] rounded-full">
           <SelectValue placeholder="EN" />
         </SelectTrigger>

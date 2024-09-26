@@ -6,6 +6,8 @@ export const deTranslation = {
           running: 'Joggen',
           read: 'Lesen',
           elements: 'Elemente',
+          statistics: 'Statistiken',
+          edit: 'Bearbeiten'
         },    
     }
 }

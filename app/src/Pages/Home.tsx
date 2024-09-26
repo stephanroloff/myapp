@@ -2,25 +2,13 @@ import reactLogo from '../assets/img/react.svg'
 import Button from '../components/Button';
 import viteLogo from '/vite.svg'
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
+import PageTransition  from "../components/PageTransition";
 
 function Home() {
   const { t } = useTranslation();
 
-  const pageVariants = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
-    exit: { opacity: 0 },
-  };
-
-  return <>
-            <motion.div
-                variants={pageVariants}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                transition={{ duration: 0.3 }}
-            >
+  return (
+          <PageTransition>
                   <h2 className="text-center pb-8 blackToWhiteText">Home Page</h2>
                   <div className="flex justify-center py-4">
                   <Button>Click me!</Button>
@@ -35,8 +23,8 @@ function Home() {
                   </div>
                   <h1 className='text-center py-6 text-[42px] blackToWhiteText'>Vite + React</h1>
                   <p className='pb-10 text-center blackToWhiteText'>{t('greeting')}</p>
-            </motion.div>
-          </>
+          </PageTransition>
+          )
 }
 
 export default Home;

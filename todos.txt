@@ -1,9 +1,6 @@
 font Type (borrar los que no se van a ocupar)
 animacion extrana al pasar de light a dark (ver en SidebarLink, que complique el codigo)
 
-menu (paginas que tiene que tener: General, Settings, etc)
-submenus (tipos de habitos para cada tipo un listado de submenu diferente)
-Templates
-framer Motion
+Problema Iconos en Sidebar (dene ser mapeados)
 
-defaultValue={'en'} en el select de los idiomas debe venir de react query
+defaultValue={'en'} en el select de los idiomas debe venir de react query / lo mismo con el dark mode

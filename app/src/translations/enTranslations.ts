@@ -6,6 +6,8 @@ export const enTranslation = {
         running: 'Running',
         read: 'Read',
         elements: 'Elements',
+        statistics: 'Statistics',
+        edit: 'Edit'
       },
     }
 }
