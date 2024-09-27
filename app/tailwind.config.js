@@ -41,6 +41,11 @@ export default {
 			// themeColorSoft: '#ffe066',   
 			// themeColorObscure: '#3b2f01',
 			// themeColorLightSoft: '#fffbea',
+
+			themeColor: '#93d02b',
+			themeColorSoft: '#c9e57d',
+			themeColorObscure: '#253608',
+			themeColorLightSoft: '#eef7d9',
   			
 			customBlack: '#131a21',
   			cardGray: '#1c252e',
