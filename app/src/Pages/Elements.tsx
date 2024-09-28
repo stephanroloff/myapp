@@ -12,7 +12,12 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import PageTransition from "@/components/PageTransition";
 import Countdown from "@/components/Countdown";
 import TabsComponent from "@/components/TabsComponent";
+import {RadialProgress} from "@/components/RadialProgress";
+import { TrendingUp } from "lucide-react"
+import { TrendingDown } from "lucide-react"
+
 import dataPerson from "../fetch/habits.json";
+import TrackingGithubStyle from "@/components/TrackingGithubStyle";
 
 const ComponenteA: React.FC = () => {
   // const events = JSON.parse(dataPerson.timelineEvents);
@@ -34,21 +39,17 @@ function Elements() {
     <>
     <PageTransition>
       <h1 className="pb-2 blackToWhiteText font-fontSecondary text-[46px]">{t(`sidebar.elements`)}</h1>
-        
-        <Card>
-          <div className="flex justify-center align-middle flex-col">
-            <p className="mb-6 text-3xl text-center">Did I read today?</p>
-            <div className="flex justify-center space-x-4">
-              <Button>Yes</Button>
-              <Button>No</Button>
-            </div>
-          </div>
-        </Card>
-        <Spacer height={50}/>
         <Card>
           <Countdown targetDate={targetDate}/>
         </Card>
-        <Spacer height={50}/>
+
+        <TrackingGithubStyle />
+
+        <Card>
+          <RadialProgress />
+          <p><TrendingUp className="text-green-500"/></p>
+          <p><TrendingDown className="text-red-500"/></p>
+        </Card>
 
         <Card>
           <p className="mb-2">Statistics</p>
@@ -60,35 +61,45 @@ function Elements() {
           </TooltipComponent>
 
           <TooltipComponent delay={0} content={`Value: ${23}`}>
-            <div className="w-[500px] py-3">
+            <div className="w-[550px] py-3">
               <Progress value={23} />
             </div>
           </TooltipComponent>
 
           <TooltipComponent delay={0} content={`Value: ${43}`}>
-            <div className="w-[500px] py-3">
+            <div className="w-[550px] py-3">
               <Progress value={43} />
             </div>
           </TooltipComponent>
           
           <TooltipComponent delay={0} content={`Value: ${93}`}>
-            <div className="w-[500px] py-3">
+            <div className="w-[550px] py-3">
               <Progress value={93} />
             </div>
           </TooltipComponent>
 
           <TooltipComponent delay={0} content={`Value: ${100}`}>
-            <div className="w-[500px] py-3">
+            <div className="w-[550px] py-3">
               <Progress value={100} />
             </div>
           </TooltipComponent>
 
           <TooltipComponent delay={0} content={`Value: ${13}`}>
-            <div className="w-[500px] py-3">
+            <div className="w-[550px] py-3">
               <Progress value={13} />
             </div>
           </TooltipComponent>
 
+        </Card>
+        
+        <Card>
+          <div className="flex justify-center align-middle flex-col">
+            <p className="mb-6 text-3xl text-center">Did I read today?</p>
+            <div className="flex justify-center space-x-4">
+              <Button>Yes</Button>
+              <Button>No</Button>
+            </div>
+          </div>
         </Card>
 
         <Spacer height={50}/>

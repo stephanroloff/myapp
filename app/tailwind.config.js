@@ -24,7 +24,8 @@ export default {
 		},
   		gridTemplateColumns: {
   			'autofit-300': 'repeat(auto-fit, minmax(300px, 1fr))',
-  			'autofill-300': 'repeat(auto-fill, minmax(300px, 1fr))'
+  			'autofill-300': 'repeat(auto-fill, minmax(300px, 1fr))',
+			'52': 'repeat(52, minmax(0, 1fr))',
   		},
   		colors: {
   			themeColor: '#02a76e',

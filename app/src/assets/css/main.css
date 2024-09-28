@@ -24,10 +24,7 @@ body {
         @apply text-customGray dark:text-white softTrans text-lg;
     }
 }
-/* 
-li {
-    font-size: 18px;
-} */
+
 
 .animate-spin-react {
     animation: spin 55s linear infinite;
@@ -78,6 +75,5 @@ li {
     animation: l3 1.2s infinite linear;
   }
   @keyframes l3 {to{transform: rotate(1turn)}}
-
 
 
