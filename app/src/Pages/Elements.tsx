@@ -9,18 +9,46 @@ import { Progress } from "@/components/ui/progress"
 import TooltipComponent from "@/components/TooltipComponent";
 import Timeline from "@/components/Timeline";
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import PageTransition from "@/components/PageTransition";
+import Countdown from "@/components/Countdown";
+import TabsComponent from "@/components/TabsComponent";
+import dataPerson from "../fetch/habits.json";
 
-
+const ComponenteA: React.FC = () => {
+  // const events = JSON.parse(dataPerson.timelineEvents);
+  const events = dataPerson.timelineEvents;
+  return(
+    <>
+      <ScrollArea className="h-[500px] w-full rounded-md  shadow-lg pr-4 ">
+        <Timeline events={events}/>
+      </ScrollArea>
+    </>
+  )
+}
 
 function Elements() {
   const { t } = useTranslation();
+  const targetDate = new Date('2024-12-31T23:59:59');
 
   return (  
     <>
     <PageTransition>
       <h1 className="pb-2 blackToWhiteText font-fontSecondary text-[46px]">{t(`sidebar.elements`)}</h1>
+        
+        <Card>
+          <div className="flex justify-center align-middle flex-col">
+            <p className="mb-6 text-3xl text-center">Did I read today?</p>
+            <div className="flex justify-center space-x-4">
+              <Button>Yes</Button>
+              <Button>No</Button>
+            </div>
+          </div>
+        </Card>
+        <Spacer height={50}/>
+        <Card>
+          <Countdown targetDate={targetDate}/>
+        </Card>
+        <Spacer height={50}/>
 
         <Card>
           <p className="mb-2">Statistics</p>
@@ -62,10 +90,6 @@ function Elements() {
           </TooltipComponent>
 
         </Card>
-        
-        <ScrollArea className="h-[500px] w-[550px] rounded-md  shadow-lg pr-4 ">
-          <Timeline />
-        </ScrollArea>
 
         <Spacer height={50}/>
         
@@ -99,24 +123,16 @@ function Elements() {
         <Spacer height={50}/>
         <Spinner/>
         <Spacer height={100}/>
+
+        <TabsComponent 
+          tabsProps={[
+            { tabTriggerArray: 'weekly', TabContentArray: <ComponenteA /> },
+            { tabTriggerArray: 'monthly', TabContentArray: <ComponenteA /> },
+            { tabTriggerArray: 'yearly', TabContentArray: <ComponenteA /> }
+          ]}
+        />
         
-        <Tabs defaultValue="account" className="w-[400px]">
-          <TabsList className="w-[550px]">
-            <TabsTrigger className="w-full" value="account">Weekly</TabsTrigger>
-            <TabsTrigger className="w-full" value="password">Montly</TabsTrigger>
-            <TabsTrigger className="w-full" value="leer">Yearly</TabsTrigger>
-          </TabsList>
-          <TabsContent value="account">
-            <ScrollArea className="h-[500px] w-[550px] rounded-md  shadow-lg pr-4 ">
-              <Timeline />
-            </ScrollArea>
-          </TabsContent>
-          <TabsContent value="password">
-            <ScrollArea className="h-[500px] w-[550px] rounded-md  shadow-lg pr-4 ">
-              <Timeline />
-            </ScrollArea>
-          </TabsContent>
-        </Tabs>
+        <Spacer height={150}/>
 
     </PageTransition> 
     </>

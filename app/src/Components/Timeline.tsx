@@ -14,6 +14,10 @@ interface TimelineItemProps extends TimelineEvent {
   isLast: boolean;
 }
 
+type TimeLineProps = {
+  events: TimelineEvent[]
+}
+
 const TimelineItem: React.FC<TimelineItemProps> = ({ title, description, date, finished, finishedSuccessfully, isLast }) => (
   <div className="flex items-start">
     <div className="flex flex-col items-center mr-4">
@@ -54,51 +58,13 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ title, description, date, f
   </div>
 );
 
-const Timeline: React.FC = () => {
-  const events: TimelineEvent[] = [
-    {
-      title: "Order Placed",
-      description: "Your order has been placed and is being processed.",
-      date: "March 1, 2024",
-      finished: true,
-      finishedSuccessfully: true
-
-    },
-    {
-      title: "Order Shipped",
-      description: "Your order has been shipped and is on its way.",
-      date: "March 3, 2024",
-      finished: true,
-      finishedSuccessfully: false
-    },
-    {
-      title: "In Transit",
-      description: "Your order is currently in transit to the destination.",
-      date: "March 5, 2024",
-      finished: false,
-      finishedSuccessfully: false
-    },
-    {
-      title: "Out for Delivery",
-      description: "Your order is out for delivery and will arrive soon.",
-      date: "March 7, 2024",
-      finished: false,
-      finishedSuccessfully: true
-    },
-    {
-      title: "Delivered",
-      description: "Your order has been successfully delivered.",
-      date: "March 8, 2024",
-      finished: false,
-      finishedSuccessfully: true
-    },
-  ];
+const Timeline = ({events}: TimeLineProps) => {
 
   return (
     <div className="w-full p-10 bg-white dark:bg-cardGray border-cardGraySoft rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold mb-6">Order Timeline</h2>
       <div className="relative">
-        <div className="absolute top-0 bottom-0 left-4 w-0.5 bg-gray-300" />
+        <div className="absolute top-0 bottom-0 left-4 w-0.5 bg-gray-700" />
         {events.map((event, index) => (
           <TimelineItem 
             key={index} 

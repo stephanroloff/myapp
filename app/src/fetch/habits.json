@@ -16,6 +16,44 @@
             "submenus": ["statistics", "challenge", "edit"],
             "notification": 0
         }
-    ]
+    ],
+    "timelineEvents":[
+        {
+          "title": "Order Placed",
+          "description": "Your order has been placed and is being processed.",
+          "date": "March 1, 2024",
+          "finished": true,
+          "finishedSuccessfully": true
+        },
+        {
+          "title": "Order Shipped",
+          "description": "Your order has been shipped and is on its way.",
+          "date": "March 3, 2024",
+          "finished": true,
+          "finishedSuccessfully": false
+        },
+        {
+          "title": "In Transit",
+          "description": "Your order is currently in transit to the destination.",
+          "date": "March 5, 2024",
+          "finished": false,
+          "finishedSuccessfully": false
+        },
+        {
+          "title": "Out for Delivery",
+          "description": "Your order is out for delivery and will arrive soon.",
+          "date": "March 7, 2024",
+          "finished": false,
+          "finishedSuccessfully": true
+        },
+        {
+          "title": "Delivered",
+          "description": "Your order has been successfully delivered.",
+          "date": "March 8, 2024",
+          "finished": false,
+          "finishedSuccessfully": true
+        }
+      ]
+      
     
 }
