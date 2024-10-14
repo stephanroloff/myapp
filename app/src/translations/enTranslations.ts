@@ -21,6 +21,9 @@ export const enTranslation = {
         challenge: 'Challenge',
         edit: 'Edit'
       },
+      timeline:{
+        title: 'Timeline',
+      }
     }
 }
     

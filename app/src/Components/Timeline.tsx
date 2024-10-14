@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Check, Clock, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 interface TimelineEvent {
   title: string;
@@ -15,7 +16,7 @@ interface TimelineItemProps extends TimelineEvent {
 }
 
 type TimeLineProps = {
-  events: TimelineEvent[]
+  events: TimelineEvent[] | undefined;
 }
 
 const TimelineItem: React.FC<TimelineItemProps> = ({ title, description, date, finished, finishedSuccessfully, isLast }) => (
@@ -59,13 +60,14 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ title, description, date, f
 );
 
 const Timeline = ({events}: TimeLineProps) => {
+  const { t } = useTranslation();
 
   return (
     <div className="w-full p-10 bg-white dark:bg-cardGray border-cardGraySoft rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold mb-6">Order Timeline</h2>
+      <h2 className="text-2xl font-bold mb-6">{t(`timeline.title`)}</h2>
       <div className="relative">
         <div className="absolute top-0 bottom-0 left-4 w-0.5 bg-gray-700" />
-        {events.map((event, index) => (
+        {events?.map((event, index) => (
           <TimelineItem 
             key={index} 
             {...event} 

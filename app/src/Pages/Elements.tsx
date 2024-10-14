@@ -22,11 +22,33 @@ import Stopwatch from "@/components/Stopwatch";
 
 const ComponenteA: React.FC = () => {
   // const events = JSON.parse(dataPerson.timelineEvents);
-  const events = dataPerson.timelineEvents;
   return(
     <>
       <ScrollArea className="h-[500px] w-full rounded-md  shadow-lg pr-4 ">
-        <Timeline events={events}/>
+      {dataPerson.myHabbits.map((habbit, index) => {
+        if (habbit.name === "Running") {
+          return <Timeline key={index} events={habbit.timelineEvents.daily} />;
+        }
+        return null;
+      })}
+
+      </ScrollArea>
+    </>
+  )
+}
+
+const ComponenteB: React.FC = () => {
+  // const events = JSON.parse(dataPerson.timelineEvents);
+  return(
+    <>
+      <ScrollArea className="h-[500px] w-full rounded-md  shadow-lg pr-4 ">
+      {dataPerson.myHabbits.map((habbit, index) => {
+        if (habbit.name === "Running") {
+          return <Timeline key={index} events={habbit.timelineEvents.weekly} />;
+        }
+        return null;
+      })}
+
       </ScrollArea>
     </>
   )
@@ -153,7 +175,8 @@ function Elements() {
 
         <TabsComponent 
           tabsProps={[
-            { tabTriggerArray: 'weekly', TabContentArray: <ComponenteA /> },
+            { tabTriggerArray: 'daily', TabContentArray: <ComponenteA /> },
+            { tabTriggerArray: 'weekly', TabContentArray: <ComponenteB /> },
             { tabTriggerArray: 'monthly', TabContentArray: <ComponenteA /> },
             { tabTriggerArray: 'yearly', TabContentArray: <ComponenteA /> }
           ]}

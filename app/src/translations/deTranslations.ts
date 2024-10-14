@@ -20,7 +20,10 @@ export const deTranslation = {
           statistics: 'Statistiken',
           challenge: 'Herausfoderung',
           edit: 'Bearbeiten'
-        },    
+        },
+        timeline:{
+          title: 'Zeitplan',
+        }    
     }
 }
     

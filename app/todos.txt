@@ -4,5 +4,3 @@ Problema Iconos en Sidebar (dene ser mapeados)
 SidebarLink Typescript Error con ClassName
 
 defaultValue={'en'} en el select de los idiomas debe venir de react query / lo mismo con el dark mode
-
-timeline: hacerlo dinamica y traducciones?

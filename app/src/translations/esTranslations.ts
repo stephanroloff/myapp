@@ -21,6 +21,9 @@ export const esTranslation = {
       challenge: 'Desafio',
       edit: 'Editar'
     },
+    timeline:{
+      title: 'Linea de tiempo',
+    }
   }
 }
     
