@@ -18,6 +18,7 @@ import { TrendingDown } from "lucide-react"
 
 import dataPerson from "../fetch/habits.json";
 import TrackingGithubStyle from "@/components/TrackingGithubStyle";
+import Stopwatch from "@/components/Stopwatch";
 
 const ComponenteA: React.FC = () => {
   // const events = JSON.parse(dataPerson.timelineEvents);
@@ -33,20 +34,35 @@ const ComponenteA: React.FC = () => {
 
 function Elements() {
   const { t } = useTranslation();
-  const targetDate = new Date('2024-12-31T23:59:59');
+  const targetDateNewYear = new Date('2024-12-31T23:59:59');
+  const sugarFastingtstartDate = new Date('2024-09-30T00:00:00');
+  
+  const startOfTheDay = new Date('2024-10-14T08:45:00');
+  const targetEndOfTheDay = new Date('2024-10-14T16:45:00');
 
   return (  
     <>
     <PageTransition>
       <h1 className="pb-2 blackToWhiteText font-fontSecondary text-[46px]">{t(`sidebar.elements`)}</h1>
         <Card>
-          <Countdown targetDate={targetDate}/>
+          <p>New Years Eve</p><br />
+          <Countdown targetDate={targetDateNewYear}/>
+        </Card>
+        <Card>
+          <p>Sugar fasting</p><br />
+          <Stopwatch startDate={sugarFastingtstartDate}/>
         </Card>
 
         <TrackingGithubStyle />
 
         <Card>
-          <RadialProgress />
+          <div>
+            <RadialProgress startValue={0} currentValue={8.5} endValue={10} />
+          </div>
+          <p>End of the Day</p>
+          <RadialProgress startValue={startOfTheDay} endValue={targetEndOfTheDay}/>
+          <Countdown targetDate={targetEndOfTheDay}/>
+          <br />
           <p><TrendingUp className="text-green-500"/></p>
           <p><TrendingDown className="text-red-500"/></p>
         </Card>
