@@ -19,6 +19,8 @@ import { TrendingDown } from "lucide-react"
 import dataPerson from "../fetch/habits.json";
 import TrackingGithubStyle from "@/components/TrackingGithubStyle";
 import Stopwatch from "@/components/Stopwatch";
+import AlertDialogComponent from "@/components/AlertDialog";
+import Drawer from "@/components/Drawer";
 
 const ComponenteA: React.FC = () => {
   // const events = JSON.parse(dataPerson.timelineEvents);
@@ -59,13 +61,18 @@ function Elements() {
   const targetDateNewYear = new Date('2024-12-31T23:59:59');
   const sugarFastingtstartDate = new Date('2024-09-30T00:00:00');
   
-  const startOfTheDay = new Date('2024-10-14T08:45:00');
-  const targetEndOfTheDay = new Date('2024-10-14T16:45:00');
+  const startOfTheDay = new Date('2024-10-15T08:45:00');
+  const targetEndOfTheDay = new Date('2024-10-15T16:45:00');
 
   return (  
     <>
     <PageTransition>
       <h1 className="pb-2 blackToWhiteText font-fontSecondary text-[46px]">{t(`sidebar.elements`)}</h1>
+      <Card>
+        <AlertDialogComponent/>
+        <br /><br />
+        <Drawer/>
+      </Card>
         <Card>
           <p>New Years Eve</p><br />
           <Countdown targetDate={targetDateNewYear}/>
