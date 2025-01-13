@@ -1,5 +1,7 @@
 {
-    "myHabbits":[
+  "darkmode": true,
+  "language": "en",  
+  "myHabbits":[
         {
             "name": "Running",
             "url": "running",
@@ -168,5 +170,5 @@
               ]
             }
         }
-    ]      
+  ]      
 }

@@ -26,12 +26,18 @@ const CountdownDigit: React.FC<{ value: number }> = ({ value }) => {
 };
 
 const CountdownUnit: React.FC<{ value: number, label: string }> = ({ value, label }) => {
-  const tens = Math.floor(value / 10);
+  const { t } = useTranslation();
+  const hundreds = Math.floor(value / 100);
+  const tens = Math.floor((value % 100) / 10);
   const ones = value % 10;
 
   return (
     <div className="text-center">
       <div className="flex">
+        {label === t('general.days') && hundreds !== 0?
+        <CountdownDigit value={hundreds} />
+        : 
+        ''}
         <CountdownDigit value={tens} />
         <CountdownDigit value={ones} />
       </div>

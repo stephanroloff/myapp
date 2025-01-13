@@ -21,6 +21,11 @@ import TrackingGithubStyle from "@/components/TrackingGithubStyle";
 import Stopwatch from "@/components/Stopwatch";
 import AlertDialogComponent from "@/components/AlertDialog";
 import Drawer from "@/components/Drawer";
+import CarouselComponent from "@/components/CarouselComponent";
+import { AreaChartComponent } from "@/components/AreaChartComponent";
+import { PieChartComponent } from "@/components/PieChartComponent";
+import { BarChartComponent } from "@/components/BarChartComponent";
+import { CalenderComponent } from "@/components/CalenderComponent";
 
 const ComponenteA: React.FC = () => {
   // const events = JSON.parse(dataPerson.timelineEvents);
@@ -58,16 +63,77 @@ const ComponenteB: React.FC = () => {
 
 function Elements() {
   const { t } = useTranslation();
-  const targetDateNewYear = new Date('2024-12-31T23:59:59');
-  const sugarFastingtstartDate = new Date('2024-09-30T00:00:00');
+  const targetDateNewYear = new Date('2025-12-31T23:59:59');
+  const sugarFastingtstartDate = new Date('2025-01-05T00:00:00');
   
-  const startOfTheDay = new Date('2024-10-15T08:45:00');
-  const targetEndOfTheDay = new Date('2024-10-15T16:45:00');
+  const startOfTheDay = new Date('2025-01-13T08:10:00');
+  const targetEndOfTheDay = new Date('2025-01-13T16:20:00');
+
+  const chartDataArea = [
+    { month: "Monday", desktop: 186 },
+    { month: "February", desktop: 305 },
+    { month: "March", desktop: 237 },
+    { month: "April", desktop: 73 },
+    { month: "May", desktop: 209 },
+    { month: "June", desktop: 214 },
+    // { month: "July", desktop: 114 },
+  ]
+
+  const chartDataPie = [
+    { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
+    { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
+    { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
+    { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
+    { browser: "other", visitors: 90, fill: "var(--color-other)" },
+  ]
 
   return (  
     <>
     <PageTransition>
       <h1 className="pb-2 blackToWhiteText font-fontSecondary text-[46px]">{t(`sidebar.elements`)}</h1>
+      <br />
+
+      <div className="grid grid-cols-3 gap-10">
+      <div className="column">
+        <div className="w-full max-w-[500px] h-[500px]">
+          {/* <BarChartComponent chartData={chartDataPie}/> */}
+          <BarChartComponent />
+        </div>
+      </div>
+      <div className="column">
+        <div className="w-full max-w-[500px] h-[500px]">
+          <PieChartComponent chartData={chartDataPie}/>
+        </div>
+      </div>
+      <div className="column">
+        <div className="w-full max-w-[500px] h-[500px]">
+          <AreaChartComponent chartData={chartDataArea}/>
+        </div>
+      </div>
+    </div>
+
+    <div className="grid grid-cols-3 gap-10">
+    <div className="column">
+        <div className="w-full max-w-[500px] h-[500px]">
+          <CalenderComponent/>
+        </div>
+      </div>
+    </div>
+
+
+
+      
+      <div className="w-full max-w-[500px] h-[500px]">
+        {/* <BarChartComponent chartData={chartDataPie}/> */}
+        <BarChartComponent />
+      </div>
+      <div className="w-full max-w-[500px] h-[500px]">
+        <PieChartComponent chartData={chartDataPie}/>
+      </div>
+      <div className="w-full max-w-[500px] h-[500px]">
+        <AreaChartComponent chartData={chartDataArea}/>
+      </div>
+      <CarouselComponent/>
       <Card>
         <AlertDialogComponent/>
         <br /><br />

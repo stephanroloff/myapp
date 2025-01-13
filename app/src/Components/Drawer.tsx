@@ -19,7 +19,7 @@ const Drawer = () => {
       <SheetTrigger asChild>
         <Button className="rounded-full">Open Drawer</Button>
       </SheetTrigger>
-      <SheetContent className="bg-cardGray border border-customGraySoft dark:border-customGray" side="right"> {/*left, right, top, bottom*/}
+      <SheetContent className="dark:bg-cardGray border border-customGraySoft dark:border-customGray" side="right"> {/*left, right, top, bottom*/}
         <SheetHeader>
           <SheetTitle>Edit profile</SheetTitle>
           <SheetDescription>

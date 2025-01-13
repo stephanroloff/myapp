@@ -21,7 +21,7 @@ const AlertDialogComponent = () => {
           <AlertDialogTrigger asChild>
             <Button className="rounded-full">Show Dialog</Button>
           </AlertDialogTrigger>
-          <AlertDialogContent className="bg-cardGray border border-customGraySoft dark:border-customGray">
+          <AlertDialogContent className="dark:bg-cardGray border border-customGraySoft dark:border-customGray">
             <AlertDialogHeader>
               <AlertDialogTitle className="text-2xl">Are you absolutely sure?</AlertDialogTitle>
               <br />
