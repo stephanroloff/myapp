@@ -17,7 +17,6 @@ import { TrendingUp } from "lucide-react"
 import { TrendingDown } from "lucide-react"
 
 import dataPerson from "../fetch/habits.json";
-import TrackingGithubStyle from "@/components/TrackingGithubStyle";
 import Stopwatch from "@/components/Stopwatch";
 import AlertDialogComponent from "@/components/AlertDialog";
 import Drawer from "@/components/Drawer";
@@ -26,6 +25,16 @@ import { AreaChartComponent } from "@/components/AreaChartComponent";
 import { PieChartComponent } from "@/components/PieChartComponent";
 import { BarChartComponent } from "@/components/BarChartComponent";
 import { CalenderComponent } from "@/components/CalenderComponent";
+import { FormComponent } from "@/components/FormComponent";
+import { CheckboxComponent } from "@/components/CheckboxComponent";
+import { InputComponent } from "@/components/InputComponent";
+import { DatePickerComponent } from "@/components/DatePickerComponent";
+import { RadioGroupComponent } from "@/components/RadioGroupComponent";
+import { SwitchComponent } from "@/components/SwitchComponent";
+import { TextAreaComponent } from "@/components/TextAreaComponent";
+import { TableComponent } from "@/components/TableComponent";
+import { YearTrackingGrid } from "@/components/YearTrackingGrid";
+
 
 const ComponenteA: React.FC = () => {
   // const events = JSON.parse(dataPerson.timelineEvents);
@@ -66,8 +75,8 @@ function Elements() {
   const targetDateNewYear = new Date('2025-12-31T23:59:59');
   const sugarFastingtstartDate = new Date('2025-01-05T00:00:00');
   
-  const startOfTheDay = new Date('2025-01-13T08:10:00');
-  const targetEndOfTheDay = new Date('2025-01-13T16:20:00');
+  const startOfTheDay = new Date('2025-01-15T08:10:00');
+  const targetEndOfTheDay = new Date('2025-01-15T16:20:00');
 
   const chartDataArea = [
     { month: "Monday", desktop: 186 },
@@ -92,7 +101,11 @@ function Elements() {
     <PageTransition>
       <h1 className="pb-2 blackToWhiteText font-fontSecondary text-[46px]">{t(`sidebar.elements`)}</h1>
       <br />
-
+      
+      <Card width={'w-fit mb-8'}>
+          <p className="mb-6 text-right">2025</p>
+          <YearTrackingGrid/>
+      </Card>
       <div className="grid grid-cols-3 gap-10">
       <div className="column">
         <div className="w-full max-w-[500px] h-[500px]">
@@ -147,8 +160,6 @@ function Elements() {
           <p>Sugar fasting</p><br />
           <Stopwatch startDate={sugarFastingtstartDate}/>
         </Card>
-
-        <TrackingGithubStyle />
 
         <Card>
           <div>
@@ -254,7 +265,22 @@ function Elements() {
             { tabTriggerArray: 'yearly', TabContentArray: <ComponenteA /> }
           ]}
         />
-        
+        <Spacer height={50}/>
+        <Card>
+          <InputComponent />
+          <CheckboxComponent />
+          <DatePickerComponent/>
+          <RadioGroupComponent/>
+          <SwitchComponent />
+          <TextAreaComponent />
+        </Card>
+        <Card>
+          <FormComponent/>
+        </Card>
+        <Card>
+          <TableComponent/>
+        </Card>
+
         <Spacer height={150}/>
 
     </PageTransition> 

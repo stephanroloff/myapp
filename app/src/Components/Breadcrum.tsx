@@ -27,10 +27,6 @@ const BreadcrumbComponent = ({parts}:BreadcrumbProps) => {
         <BreadcrumbSeparator />
 
         {parts.map((part,index) =>{
-
-          console.log('Length', parts.length);
-          console.log('index', index);
-
           if((index+1) == parts.length){
             return(
               <React.Fragment key={index}>
